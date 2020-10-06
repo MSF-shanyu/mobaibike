@@ -27,8 +27,8 @@ public class UserController {
 	
 	private Logger logger = Logger.getLogger(UserController.class);
 	
-	private final String SECRET = "c87a9b640f92409c2d8c1fa98367bee1";
-	private final String APPID = "wx539f0585ff96ba5e";
+	private final String SECRET = "";
+	private final String APPID = "";
 	private final String WXSERVER = "https://api.weixin.qq.com/sns/jscode2session?appid=" + APPID + "&secret=" + SECRET + "&grant_type=authorization_code";
 	
 	@PostMapping("/userList")
