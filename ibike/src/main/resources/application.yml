@@ -1,0 +1,30 @@
+server:  
+    port: 8081
+    servlet: 
+       session.timeout: 60000
+       contextpath: /ibike    
+    undertow:  
+        io-threads: 16  
+        worker-threads: 256  
+        buffer-size: 1024  
+        buffers-per-region: 1024  
+        direct-buffers: true 
+        accesslog: 
+            dir: ../log/access
+            enabled: true
+            pattern: "%h %l %u %s %b %D %t \"%r\" \"%{i,Referer}\" \"%{i,User-Agent}\""
+            prefix: ibike_access
+            suffix: .log
+            rotate: true
+        
+logging:
+    level: 
+        root: info
+        org.springframework: info
+        com.aa: info
+    file: ../log/run/ibike.log
+swagger: 
+    enabled: false
+
+
+ 
